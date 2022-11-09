@@ -6,8 +6,8 @@ os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "true"
 os.environ["TF_XLA_FLAGS"] = "--tf_xla_auto_jit=2"
 
 import tensorflow as tf
-
-
+import numpy as np
+import pandas as pd
 
 #########################################################################
 # Here's the Residual layer from the first half again:
@@ -225,6 +225,9 @@ def train_epoch(i_epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BA
     steps_per_epoch = int(1281167 / BATCH_SIZE)
     steps_validation = int(50000 / BATCH_SIZE)
 
+    loss_values = pd.DataFrame(columns=["step", "loss"])
+    acc_values = pd.DataFrame(columns=["step", "acc"])
+
     start = time.time()
     for train_images, train_labels in train_ds.take(steps_per_epoch):
         if step_in_epoch > steps_per_epoch: break
@@ -232,6 +235,8 @@ def train_epoch(i_epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BA
 
         # Peform the training step for this batch
         loss, acc = training_step(network, optimizer, train_images, train_labels)
+        loss_values.loc[len(loss_values.index)] = [step_in_epoch, loss]
+        acc_values.loc[len(acc_values.index)] = [step_in_epoch, acc]
         end = time.time()
         images_per_second = BATCH_SIZE / (end - start)
         print(f"Finished step {step_in_epoch.numpy()} of {steps_per_epoch} in epoch {i_epoch.numpy()},loss={loss:.3f}, acc={acc:.3f} ({images_per_second:.3f} img/s).")
@@ -239,6 +244,8 @@ def train_epoch(i_epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BA
 
     # Save the network after every epoch:
     checkpoint.save("resnet34/model")
+    loss.to_csv("/home/devmehta/ai-science-training-series/04_modern_neural_networks/loss.csv")
+    acc.to_csv("/home/devmehta/ai-science-training-series/04_modern_neural_networks/acc.csv")
 
     # Compute the validation accuracy:
     mean_accuracy = None

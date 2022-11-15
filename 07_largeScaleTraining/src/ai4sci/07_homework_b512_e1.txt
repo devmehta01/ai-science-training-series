@@ -1,0 +1,31 @@
+==> /home/devmehta/ai-science-training-series/07_largeScaleTraining/src/ai4sci/logs/2022-11-14-212541-thetagpu14_ngpu8_ncpu256.log <==
+[2022-11-14 21:33:11,996][__main__][INFO] - Total training time: 333.3293249607086 seconds
+[2022-11-14 21:33:11,997][__main__][INFO] - Total training time: 333.33011388778687 seconds
+[2022-11-14 21:33:11,997][__main__][INFO] - Average time per epoch in the last 5: 328.3385579586029
+[2022-11-14 21:33:11,997][__main__][INFO] - Total training time: 333.33110308647156 seconds
+[2022-11-14 21:33:11,997][__main__][INFO] - Average time per epoch in the last 5: 328.3386323451996
+[2022-11-14 21:33:11,997][__main__][INFO] - Total training time: 333.3300805091858 seconds
+[2022-11-14 21:33:11,998][__main__][INFO] - Average time per epoch in the last 5: 328.3353223800659
+[2022-11-14 21:33:11,998][__main__][INFO] - Average time per epoch in the last 5: 328.33797669410706
+[2022-11-14 21:33:12,000][__main__][INFO] - Total training time: 333.332275390625 seconds
+[2022-11-14 21:33:12,000][__main__][INFO] - Average time per epoch in the last 5: 328.3400890827179
+[2022-11-14 21:33:12,003][__main__][INFO] - Total training time: 333.33572244644165 seconds
+[2022-11-14 21:33:12,003][__main__][INFO] - Average time per epoch in the last 5: 328.3449261188507
+[2022-11-14 21:33:12,007][__main__][INFO] - Total training time: 333.339870929718 seconds
+[2022-11-14 21:33:12,008][__main__][INFO] - Average time per epoch in the last 5: 328.3489546775818
+thetagpu14:1736238:1738719 [7] NCCL INFO comm 0x7f0bc30e3200 rank 7 nranks 8 cudaDev 7 busId bd000 - Destroy COMPLETE
+thetagpu14:1736230:1738712 [0] NCCL INFO comm 0x7fc7fb0ce220 rank 0 nranks 8 cudaDev 0 busId 7000 - Destroy COMPLETE
+thetagpu14:1736231:1738714 [1] NCCL INFO comm 0x7f7f930ea210 rank 1 nranks 8 cudaDev 1 busId f000 - Destroy COMPLETE
+thetagpu14:1736233:1738715 [3] NCCL INFO comm 0x7f77630e5270 rank 3 nranks 8 cudaDev 3 busId 4e000 - Destroy COMPLETE
+thetagpu14:1736236:1738718 [6] NCCL INFO comm 0x7fd2f70e3240 rank 6 nranks 8 cudaDev 6 busId b7000 - Destroy COMPLETE
+thetagpu14:1736232:1738716 [2] NCCL INFO comm 0x7fa2df0e1a30 rank 2 nranks 8 cudaDev 2 busId 47000 - Destroy COMPLETE
+thetagpu14:1736235:1738717 [5] NCCL INFO comm 0x7f3ca30e8240 rank 5 nranks 8 cudaDev 5 busId 90000 - Destroy COMPLETE
+thetagpu14:1736234:1738713 [4] NCCL INFO comm 0x7f46230c11d0 rank 4 nranks 8 cudaDev 4 busId 87000 - Destroy COMPLETE
+[2022-11-14 21:33:20,842][__main__][INFO] - -------------------
+[2022-11-14 21:33:20,843][__main__][INFO] - [TEST] Accuracy: 0%
+[2022-11-14 21:33:20,843][__main__][INFO] - -------------------
+[2022-11-14 21:33:20,879][__main__][INFO] - ----------------------------
+[2022-11-14 21:33:20,879][__main__][INFO] - [TRAIN]  loss=0.0016  acc=0%
+[2022-11-14 21:33:20,879][__main__][INFO] - ----------------------------
+[2022-11-14 21:33:21,443][__main__][INFO] - Total training time: 342.77625274658203 seconds
+[2022-11-14 21:33:21,444][__main__][INFO] - Average time per epoch in the last 5: 328.3444435596466
